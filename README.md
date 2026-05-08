@@ -6,7 +6,6 @@
 
 A professional web application that uses cutting-edge AI to transcribe and summarize lectures from multiple sources. Built with OpenAI's Whisper for transcription and Facebook's BART for intelligent summarization.
 
-![LectureLens Demo](https://via.placeholder.com/800x400?text=LectureLens+Demo)
 
 ---
 
