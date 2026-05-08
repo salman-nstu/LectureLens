@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Application specific
+uploads/
+outputs/
+*.wav
+*.mp3
+*.mp4
+*.webm
+*.m4a
+*.flac
+lecture_summary.*
+youtube_audio.*
+recording.wav
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
