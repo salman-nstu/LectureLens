@@ -10,22 +10,24 @@
 
 /* ==================== CSS Variables ==================== */
 :root {
+  /* Dark theme (default) */
   --text-color: #ffffff;
   --subheading-color: rgba(255, 255, 255, 0.7);
   --placeholder-color: rgba(255, 255, 255, 0.5);
-  --primary-color: #000000;
-  --secondary-color: rgba(0, 0, 0, 0.8);
-  --secondary-hover-color: rgba(0, 0, 0, 0.6);
+  --primary-color: #1a1a1a;
+  --secondary-color: rgba(255, 255, 255, 0.1);
+  --secondary-hover-color: rgba(255, 255, 255, 0.15);
   --scrollbar-color: rgba(255, 255, 255, 0.3);
 }
 
 body.light-theme {
+  /* Light theme */
   --text-color: #000000;
   --subheading-color: rgba(0, 0, 0, 0.7);
   --placeholder-color: rgba(0, 0, 0, 0.5);
   --primary-color: #ffffff;
-  --secondary-color: rgba(255, 255, 255, 0.8);
-  --secondary-hover-color: rgba(255, 255, 255, 0.6);
+  --secondary-color: rgba(0, 0, 0, 0.08);
+  --secondary-hover-color: rgba(0, 0, 0, 0.12);
   --scrollbar-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -52,6 +54,21 @@ body {
   height: 100vh;
   z-index: -1;
   overflow: hidden;
+}
+
+.video-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+body.light-theme .video-container::after {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .video-container video {
@@ -355,10 +372,17 @@ body.chats-active .container :where(.app-header, .suggestions) {
   text-align: center;
   padding: 40px;
   border-radius: 20px;
-  background: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   max-width: 500px;
   width: 90%;
   animation: slideUp 0.4s ease;
+}
+
+body.light-theme .recording-content {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @keyframes slideUp {
