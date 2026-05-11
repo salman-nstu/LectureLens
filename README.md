@@ -1,127 +1,36 @@
 # LectureLens - AI-Powered Lecture Summarizer
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-3.0%2B-green.svg)](https://flask.palletsprojects.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Transcribe and summarize lectures using AI (Whisper + BART).
 
-An AI-powered web application that transcribes and summarizes lectures from multiple sources using OpenAI's Whisper and Facebook's BART.
+## Features
 
-## ✨ Features
+- 🎙️ Microphone recording
+- 📂 Audio/video file upload
+- 📺 YouTube video support
+- 📝 AI summarization & key points extraction
+- 💾 Export to PDF, Word, or JSON
 
-- **🎙️ Microphone Recording** - Record lectures directly
-- **📂 File Upload** - Process audio/video files (MP3, MP4, WAV, AVI, MOV, FLAC, M4A, WEBM)
-- **📺 YouTube Integration** - Extract and summarize YouTube videos
-- **🤖 AI Transcription** - OpenAI Whisper for accurate speech-to-text
-- **📝 Intelligent Summarization** - Facebook BART for concise summaries
-- **💾 Export Options** - PDF, Word, or JSON formats
-- **🎨 Responsive Design** - Works on desktop, tablet, and mobile
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Python 3.8+
-- pip (included with Python)
-- FFmpeg (for video processing)
-
-### Installation
+## Quick Start
 
 ```bash
-# Clone repository
 git clone https://github.com/salman-nstu/LectureLens.git
 cd LectureLens
-
-# Create and activate virtual environment
-python -m venv venv
-venv\Scripts\activate  # Windows
-source venv/bin/activate  # macOS/Linux
-
-# Install dependencies
+python -m venv venv && venv\Scripts\activate
 pip install -r requirements.txt
-```
-
-### Running the Application
-
-```bash
-# Terminal 1: Start backend
 python api_server.py
-
-# Terminal 2: Start frontend
-python -m http.server 8000
+# In another terminal: python -m http.server 8000
 ```
 
-Then open `http://localhost:8000` in your browser.
+Open `http://localhost:8000` in your browser.
 
-## 🏗️ Technology Stack
+## License
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Backend**: Python 3.8+, Flask
-- **AI Models**: OpenAI Whisper (transcription), Facebook BART (summarization)
-- **Key Libraries**: yt-dlp, sounddevice, PyTorch, Transformers, python-docx, fpdf
+MIT - See [LICENSE](LICENSE) for details.
 
-## 📁 Project Structure
+## Support
 
-```
-LectureLens/
-├── index.html              # Main HTML interface
-├── styles.css              # Application styles
-├── app.js                  # Frontend JavaScript
-├── api_server.py           # Flask API server
-├── summarization_service.py # AI processing service
-├── config.py               # Configuration settings
-├── requirements.txt        # Python dependencies
-├── LICENSE                 # License file
-├── README.md               # Documentation
-└── videos/                 # Video assets
-```
-
-## ⚙️ Configuration
-
-Edit `config.py` to customize:
-
-```python
-HOST = "127.0.0.1"
-PORT = 5000
-MAX_FILE_SIZE = 500 * 1024 * 1024  # 500MB
-WHISPER_MODEL = "medium"           # Options: tiny, base, small, medium, large
-SUMMARY_MAX_LENGTH = 350
-SUMMARY_MIN_LENGTH = 30
-```
-
-## 🐛 Troubleshooting
-
-**Module not found errors:**
-```bash
-pip install -r requirements.txt
-```
-
-**FFmpeg not found:**
-Install FFmpeg using:
-- Windows: `choco install ffmpeg`
-- macOS: `brew install ffmpeg`
-- Linux: `sudo apt install ffmpeg`
-
-**Port already in use:**
-```bash
-# Change port in config.py
-PORT = 5001
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- OpenAI (Whisper model)
-- Facebook AI (BART model)
-- Hugging Face (Transformers library)
-- Flask team
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/salman-nstu/LectureLens/issues)
-- **Email**: salman.nstu@gmail.com
+📧 salman.nstu@gmail.com  
+🐛 [Issues](https://github.com/salman-nstu/LectureLens/issues)
 
 **YouTube URL:**
 ```javascript
